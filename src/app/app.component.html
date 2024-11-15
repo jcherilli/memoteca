@@ -6,6 +6,20 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!--
+4 Respostas
+
+Eu tive o mesmo problema e apenas resolvi da seguinte maneira. Defina o skipLibCheckbandeira para verdadeiro no angularCompilerOptionsDentro 
+do seu tsconfig.jsondo ficheiro.
+
+{
+  "angularCompilerOptions": {
+    "skipLibCheck": true
+  }
+}
+
+Isso diz ao TypeScript para ignorar a verificação de tipo para bibliotecas de terceiros, o que pode ajudar a evitar problemas de referência circular.
+-->
 
 <style>
   :host {
